@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Contact';
+const description = 'Contact Abby.';
+const permalink = `${Astro.site.href}contact`;
+---
+
+<BaseLayout title={title} description={description} permalink={permalink} current="about">
+  <div class="container">
+    <h1>Contact</h1>
+    <figure class="contact-image">
+      <img src="/assets/bio-book.png" alt="Illustration of a notebook" width="330"> 
+    </figure>
+    <p>Have a work inquiry, or just want to say hello? You can reach me at:</p>
+    <p>dev@abbygrobbel.com</p>
+  </div>
+</BaseLayout>
+
+<style>
+  .contact-image {
+    float: right;
+    margin: -3em -7em 2em 2em;
+    max-width: 300px;
+  }
+
+  .contact-image img {
+    border-radius: 8px;
+    margin-bottom: 1.5em;
+  }
+
+  @media (max-width: 1020px) {
+    .contact-image {
+      float: none;
+      margin: 0 auto 2em;
+    }
+  }
+</style>
