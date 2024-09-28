@@ -1,5 +1,5 @@
 ---
-import Logo from './Logo.astro'
+import Icon from './Icon.tsx'
 import Nav from './Nav.astro'
 
 const { current = '' } = Astro.props;
@@ -16,6 +16,6 @@ const { current = '' } = Astro.props;
 </style>
 
 <header>
-  <Logo />
+  <Icon client:only="react"/>
   <Nav current={current} />
 </header>

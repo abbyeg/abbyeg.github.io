@@ -60,6 +60,6 @@ const { current = '' } = Astro.props;
   <a class={current === "contact" ? "selected" : ""} href='/contact'>contact</a>
   <!-- TODO uncomment when i have blog content <a class={current === "blog" ? "selected" : ""} href='/blog'>blog</a> -->
   <div class="theme-toggle-container">
-    <ThemeToggleButton client:load />
+    <ThemeToggleButton client:only="react" />
   </div>
 </nav>
